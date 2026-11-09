@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
+import Personalize from "@/components/Personalize";
 
 const body = Inter({
   variable: "--font-body",
@@ -35,7 +36,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${body.variable} ${display.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans overflow-x-clip">
+        <Personalize />
+        {children}
+      </body>
     </html>
   );
 }

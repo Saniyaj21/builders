@@ -315,7 +315,7 @@ export default function Home() {
                 title="Proudly local to Summit Valley"
                 text="Our crews are based in Millbrook, so we’re never more than 40 minutes from your project — and we never disappear after the final invoice."
               />
-              <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm sm:grid-cols-2">
+              <ul className="mt-8 grid grid-cols-1 gap-x-6 gap-y-2.5 text-sm min-[420px]:grid-cols-2">
                 {towns.map((t) => (
                   <li key={t.name} className="flex items-center justify-between border-b border-white/10 pb-2">
                     <span className="inline-flex items-center gap-2"><PinIcon className="h-4 w-4 text-brand" />{t.name}</span>
